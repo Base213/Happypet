@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Venta de productos para gatos">
+    <meta name="author" content="HappyPet SA">
+
+    <title>HappyPet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="js/cat_icon_138789.png">
+</head>
+
+<body>
+    <!-- Barra Navegacion -->
+    <header id="header">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <img class="logo" src="img/2865755.png" alt="">
+                <a class="navbar-brand" href="index.html">HappyPet</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="registro.html">Crear cuenta</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="ingresar.html">Iniciar sesion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="misdatos.html">Mis datos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="administracion.html">Administrar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="miscompras.html">Mis compras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="concurso.html">Concurso</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- titulo -->
+    <div class="text-center">
+        <h1>Registro de cliente</h1>
+    </div>
+
+    <br>
+
+    <!-- formulario de cliente -->
+
+    <form class="row g-3 needs-validation" novalidate>
+        <div class="container-fluid">
+            <!-- todos los datos del cliente -->
+            <div class="row justify-content-center">
+                <!-- datos del cliente -->
+
+                <!-- RUT -->
+                <div class="col-sm-12 col-md-4" id="datos">
+                    <div class="mb-3">
+                        <label for="rut" class="form-label">RUT</label>
+                        <input required placeholder="Ej: 10123123-K" type="text" class="form-control" id="rutHelp"
+                            required aria-describedby="rutlHelp">
+                        <div id="rutHelp" class="form-text">Ingrese RUT sin puntos</div>
+
+                        <div class="invalid-feedback">
+                            El campo RUT es obligatorio
+                        </div>
+                    </div>
+
+                    <!-- Nombre -->
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input required placeholder="Ej: Marcela" type="text" class="form-control" id="nombre" required
+                            aria-describedby="nombreHelp">
+                        <div id="nombreHelp" class="form-text">Escriba su nombre</div>
+
+                        <div class="invalid-feedback">
+                            Debe ingresar su nombre
+                        </div>
+                    </div>
+
+                    <!-- Apellido -->
+                    <div class="mb-3">
+                        <label for="apellido" class="form-label">Apellido</label>
+                        <input required placeholder="Ej: Valencia" type="text" class="form-control" id="apellido"
+                            required aria-describedby="apellidoHelp">
+                        <div id="apellidoHelp" class="form-text">Escriba su apellido</div>
+
+                        <div class="invalid-feedback">
+                            Debe ingresar su apellido
+                        </div>
+                    </div>
+
+                    <!-- Correo -->
+                    <div class="mb-3">
+                        <label for="correo" class="form-label">Correo electrónico</label>
+                        <input required placeholder="Ej: catlover@happypet.cl" type="text" class="form-control"
+                            id="correo" required aria-describedby="correolHelp">
+                        <div id="correoHelp" class="form-text">Ingrese su correo electrónico</div>
+
+                        <div class="invalid-feedback">
+                            Debe ingresar un correo para poder crear una cuenta
+                        </div>
+                    </div>
+
+
+                    <!-- Contraseña -->
+                    <div class="mb-3">
+                        <label for="contraseña1" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="contraseña1" name="contraseña1" required
+                            aria-describedby="contraseña1Help">
+                        <div id="contraseña1Help" class="form-text">
+                            La contraseña debe tener entre 8 a 20 caracteres
+                        </div>
+
+                        <div class="invalid-feedback">
+                            Debe ingresar contraseña
+                        </div>
+                    </div>
+
+                    <!-- Repetir Contraseña -->
+                    <div class="mb-3">
+                        <label for="contraseña2" class="form-label">Repetir contraseña</label>
+                        <input required placeholder="" type="password" class="form-control" id="contraseña2" required
+                            pattern="^[\w@-]{8,20}$">
+
+                        <div class="invalid-feedback">
+                            Debe ingresar nuevamente contraseña
+                        </div>
+                    </div>
+
+                    <!-- Suscripcion -->
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Suscribirme a Fundación HappyPet 🐱</label>
+                    </div>
+                </div>
+
+                <!-- foto cliente -->
+                <div class="col-sm-12 col-md-6 text-center" id="foto">
+                    <img src="img/10_senales_de_que_mi_gato_me_quiere_41253_600_square.png" alt="">
+                    <label for="formFile" class="form-label"></label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+
+                <br><br><br><br><br><br>
+            </div>
+        </div>
+
+        <!-- botones -->
+        <div class="row" id="botones">
+            <div class="col text-center">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+                <button type="reset" class="btn btn-primary">Limpiar</button>
+            </div>
+        </div>
+        </div>
+    </form>
+
+    <!-- Script bootstrap -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

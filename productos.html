@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Venta de productos para gatos">
+    <meta name="author" content="HappyPet SA">
+
+    <title>HappyPet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="js/cat_icon_138789.png">
+</head>
+
+<body>
+    <!-- Barra Navegacion -->
+    <header id="header">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <img class="logo" src="img/2865755.png" alt="">
+                <a class="navbar-brand" href="index.html">HappyPet</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="registro.html">Crear cuenta</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="ingresar.html">Iniciar sesion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="misdatos.html">Mis datos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="administracion.html">Administrar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="miscompras.html">Mis compras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="concurso.html">Concurso</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- titulo -->
+    <div class="text-center">
+        <h1>Mantenedor de productos</h1>
+    </div>
+
+    <br>
+
+    <!-- formulario de cliente -->
+
+    <form class="row g-3 needs-validation" novalidate>
+        <div class="container-fluid">
+            <!-- todos los datos del cliente -->
+            <div class="row justify-content-center">
+                <!-- datos del cliente -->
+
+                <!-- id -->
+                <div class="col-sm-12 col-md-4" id="datos">
+                    <div class="mb-3">
+                        <label for="id" class="form-label">Id del producto</label>
+                        <input required placeholder="Ej: 111111" type="text" class="form-control" id="idpHelp" required
+                            aria-describedby="idpHelp">
+                        <div id="idlHelp" class="form-text">Escriba la id del producto</div>
+
+                        <div class="invalid-feedback">
+                            El campo id es obligatorio
+                        </div>
+                    </div>
+                    <!--ComboBox-->
+                    <div class="col-sm-12 col-md-4">
+                        <label for="animales">Eliga una categoria:</label>
+                        <select name="animales" id="animales">
+                            <option value="perro">Perro</option>
+                            <option value="gato">Gato</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Debes seleccionar una categoria
+                        </div>
+                    </div>
+                    <br>
+
+                    <!-- Nombre -->
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input required placeholder="Ej: Nombre del producto" type="text" class="form-control"
+                            id="nombre" required aria-describedby="nombreHelp">
+                        <div id="nombrelHelp" class="form-text">Escriba el nombre del producto</div>
+
+                        <div class="invalid-feedback">
+                            Debe ingresar un nombre
+                        </div>
+                    </div>
+
+                    <!-- Descripcion -->
+                    <div class="mb-3">
+                        <label for="Descripcion" class="form-label">Descripcion</label>
+                        <input required placeholder="Ej: Descripcion del producto" type="text" class="form-control"
+                            id="descripcion" required aria-describedby="descripcionlHelp">
+                        <div id="descripcionHelp" class="form-text">Escriba la descripcion del producto</div>
+
+                        <div class="invalid-feedback">
+                            Debe ingresar la descripcion del producto
+                        </div>
+                    </div>
+
+                    <!-- Precio -->
+                    <div class="mb-3">
+                        <label for="precio" class="form-label">Precio</label>
+                        <input required placeholder="Ej: $8000" type="text" class="form-control" id="precio" required
+                            aria-describedby="preciolHelp">
+                        <div id="preciolHelp" class="form-text">Ingrese el precio del producto</div>
+
+                        <div class="invalid-feedback">
+                            Debe ingresar un precio para el producto
+                        </div>
+                    </div>
+
+
+                    <!-- Descuento Sub -->
+                    <div class="mb-3">
+                        <label for="descuento" class="form-label">Descuento Subscriptor</label>
+                        <input required placeholder="Ej: 5%" type="text" class="form-control" id="descuento"
+                            name="descuento" required aria-describedby="descuentolHelp">
+                        <div id="descuentolHelp" class="form-text">
+                            Ingrese el descuento de acuerdo a la Subscripcion
+                        </div>
+
+                        <div class="invalid-feedback">
+                            Debe ingresar un valor de descuento para el producto
+                        </div>
+                    </div>
+
+                    <!-- Descuento ofe -->
+                    <div class="mb-3">
+                        <label for="descuentoof" class="form-label">Descuento Oferta</label>
+                        <input required placeholder="Ej: 2%" type="text" class="form-control" id="descuentoof" required
+                            aria-describedby="descuentolHelp">
+                        <div id="descuentolHelp" class="form-text">
+                            Ingrese el descuento de acuerdo a la oferta
+                        </div>
+
+                        <div class="invalid-feedback">
+                            Debe ingresar un valor de descuento por oferta para el producto
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- foto cliente -->
+                <div class="col-sm-12 col-md-6 text-center" id="foto">
+                    <img src="img/10_senales_de_que_mi_gato_me_quiere_41253_600_square.png" alt="">
+                    <label for="formFile" class="form-label"></label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+
+                <br><br><br><br><br><br>
+            </div>
+        </div>
+
+        <!-- botones -->
+
+        &nbsp; &nbsp; &nbsp; <div class="row" id="botones">
+            <div class="col-sm-12 col-md-3 d-flex justify-content-evenly">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+                <button type="submit" class="btn btn-primary">Nuevo</button>
+                <button type="reset" class="btn btn-primary">Eliminar</button>
+            </div>
+        </div>
+        </div>
+
+
+        <div class="container">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Categoria</th>
+                        <th>Nombre</th>
+                        <th>Descripcion</th>
+                        <th>Precio</th>
+                        <th>%Descuento Sub</th>
+                        <th>%Descuento oferta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Gatos</td>
+                        <td>Whiskas Alimento Gatitos (Carne y leche)</td>
+                        <td>1 kg, sabor a carne y leche, 2-12 meses</td>
+                        <td>$4.490</td>
+                        <td>5%</td>
+                        <td>2%</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Gatos</td>
+                        <td>Bola de fuga de alimento</td>
+                        <td>Juguete dispensador de alimento especial para ejercitar a tu gatito</td>
+                        <td>$21.420</td>
+                        <td>5%</td>
+                        <td>2%</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Gatos</td>
+                        <td>Juguete Pescado</td>
+                        <td>Juguete recargable via USB, con sensor de movimiento incorporado</td>
+                        <td>$7.990</td>
+                        <td>5%</td>
+                        <td>2%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </form>
+
+    <!-- Script bootstrap -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

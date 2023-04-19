@@ -14,40 +14,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="shortcut icon" type="image/x-icon" href="js/cat_icon_138789.png">
 
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        th,
-        td {
-            padding: 8px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        tr:hover {
-            background-color: #f5f5f5;
-        }
-
-        .subtotal {
-            background-color: #F5A9A9;
-            font-weight: bold;
-        }
-
-        .total {
-            background-color: #8A0808;
-            color: white;
-            font-weight: bold;
-        }
-    </style>
-
+    
 </head>
 
 <body>
@@ -90,6 +57,9 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="concurso.html">Concurso</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="carrito.html">Carrito</a>
+                        </li>   
                     </ul>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="" aria-label="Search">
@@ -102,65 +72,84 @@
 
 
     <h1>Carrito de compras</h1>
-    <h2>Productos en el carrito</h2>
-    <table>
+    <h1>
+        Detalle boleta 425
+      </h1>
+      <br>
+      <br>
+      
+      <table class="table table-bordered">
         <thead>
-            <tr>
-                <th>Categoria</th>
-                <th>Producto</th>
-                <th>Precio</th>
-
-            </tr>
+          <tr>
+            <th scope="col">Categoria</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Precio</th>
+            <th scope="col">%Subscriptor</th>
+            <th scope="col">%Oferta</th>
+            <th scope="col">%Descuento total</th>
+            <th scope="col">Descuentos</th>
+            <th scope="col">Precio a pagar</th>
+            <th scope="col">Opciones</th>
+          </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Gatos</td>
-                <td>Whiskas Alimento Gatitos</td>
-                <td>$4.490</td>
-            </tr>
-            <tr>
-                <td>Gatos</td>
-                <td>Hill's Science Diet Kitten (Pollo)</td>
-                <td>$19.990</td>
-            </tr>
-            <tr>
-                <td>Gatos</td>
-                <td> Whiskas Alimento Gato Adulto (Pescado)</td>
-                <td>$28.500</td>
-            </tr>
+          <tr>
+            <td>Perros</td>
+            <td>Saco Royal Canin 3kg</td>
+            <td>$8.000</td>
+            <td>5%</td>
+            <td>5%</td>
+            <td>10%</td>
+            <td>800</td>
+            <td>7.200</td>
+            <td><a href="">Eliminar</td>  
+          </tr>
+          <tr>
+            <td>Perros</td>
+            <td>Hueso gris 3kg</td>
+            <td>$2.000</td>
+            <td>0%</td>
+            <td>0%</td>
+            <td>0%</td>
+            <td>0</td>
+            <td>2.000</td>
+            <td><a href="">Eliminar</td> 
+          </tr>
+          <tr>
+            <td>Gatos</td>
+            <td>Raton de juguete</td>
+            <td>$3.000</td>
+            <td>25%</td>
+            <td>0%</td>
+            <td>25%</td>
+            <td>750</td>
+            <td>2.250</td>
+            <td><a href="">Eliminar</td> 
+          </tr>
+          <tr>
+            <td>Gatos</td>
+            <td>Pescado de juguete</td>
+            <td>$5.000</td>
+            <td>0%</td>
+            <td>10%</td>
+            <td>10%</td>
+            <td>500</td>
+            <td>4.500</td>
+            <td><a href="">Eliminar</td>
+          </tr>
         </tbody>
-    </table>
-
-    <h2>Productos sugeridos</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Producto</th>
-                <th>Precio unitario</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Juguete Interactivo Molinillo de Viento</td>
-                <td>$16.990</td>
-                <td><button>Añadir al carrito</button></td>
-            </tr>
-            <tr>
-                <td> Bola de fuga de alimento</td>
-                <td>$21.420</td>
-                <td><button>Añadir al carrito</button></td>
-            </tr>
-            <tr>
-                <td>Juguete Pescado</td>
-                <td>$7.990</td>
-                <td><button>Añadir al carrito</button></td>
-            </tr>
-        </tbody>
-    </table>
-
+      </table>
+      <td>Precio sin IVA: $13.403</td>
+      <br>
+      <td>Precio del IVA(19%): $2.547</td>
+      <br>
+      <td>Total a pagar: $15.950</td>
+      
+        <br>
+      
 
     <button>Comprar</button>
+    <button>Cancelar compra</button>
 
 
     <!-- Script bootstrap -->
